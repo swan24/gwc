@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example</title>
+
+</head>
+
+<body>
+
+<div id = "myDiv">
+
+  <input type="text" name="baseinput" id="myText">
+  <input type="text" name="baseinput" id="myText1">
+  <input type="text" name="baseinput" id="myText2">
+  <input type="button" value="Submit" onclick="getTextInput()">
+</div>
+
+
+
+<script type ="text/javascript">
+
+function getTextInput(){
+  var input = document.getElementById("myText").value;
+  var input2 = document.getElementById("myText1").value;
+  var input3 = document.getElementById("myText2").value;
+  document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + input +input2 +input3;
+
+}
+
+
+
+</script>
+
+</body>
+
+</html>
