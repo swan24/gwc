@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personality Quiz</title>
+
+</head>
+
+<body style="background-color:blue">
+<h1 style="color:red;">Personality Quiz</h1>
+
+<div id = "myDiv">
+ <p1 style="color:black;">What is your favorite animal?</p1>
+ <br/ >
+ <input type="radio" name="animal" id="animal1"> Dog
+ <input type="radio" name="animal" id="animal2"> Cat
+ <input type="radio" name="animal" id="animal3"> Fish
+ <br />
+ <input type ="button" value="Submit" onclick="">
+
+  <br/ >
+  <p2 style="color;black;">What subject you like the most?</p2>
+  <br/ >
+
+  <input type="radio" name="subject" id="subject1"> Science
+  <input type="radio" name="subject" id="subject2"> Math
+  <input type="radio" name="subject" id="subject3"> English
+  <br/ >
+  <input type="button" value="Submit" onclick=""
+
+  <br/ >
+  <p3 style="color;black;">What is your favorite color?</p3>
+  <br/ >
+
+  <input type="radio" name="color" id="color1"> Red
+  <input type="radio" name="color" id="color2"> Blue
+  <input type="radio" name="color" id="color3"> Black
+  <br/ >
+  <input type="button" value="Submit" onclick=""
+
+  <br/ >
+
+
+
+
+<script type ="text/javascript">
+
+function getTextInput(){
+  var input = document.getElementById("myText").value;
+  var animal ="My favorite animal is";
+  var input = document.getElementById("myText1").value;
+  var subject ="The subject I like the most is";
+  var input = document.getElementById("myText2").value;
+  var color ="My favorite color is";
+
+
+
+    document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + animal+input;
+    document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + subject+input;
+    document.getElementById("myDiv").innerHTML += "<br />" +"<br />" + color+input;
+  }
+
+
+  </script>
+
+  </body>
+
+  </html>
