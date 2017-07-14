@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+
+<p id="sample"></p>
+
+<script type="text/javascript">
+
+    function CapA(inString){
+      var outString="";
+
+        for (var i=0; i<inString.length; i+=1){
+             if (inString.charAt(i)=="a"){
+                  outString +="A";
+             }
+             else{
+                 outString += inString.charAt(i);
+             }
+      }
+
+      return outString;
+  }
+document.getElementById("sample").innerHTML =
+    CapA("Candy");
+</script>
+
+</body>
+</html>
