@@ -19,9 +19,7 @@
 
  <br/ >
 
- <input type ="button" value="Submit" onclick="answer">
-
-  <br/ >
+ <br/ >
 
   <p2 style="color;black;">What subject you like the most?</p2>
 
@@ -33,7 +31,7 @@
 
   <br/ >
 
-  <input type="button" value="Submit" onclick="answer">
+
 
   <br />
 
@@ -46,7 +44,7 @@
   <input type="radio" name="color" id="color3"> Black
 
   <br/ >
-  <input type="button" value="Submit" onclick="answer">
+
 
   <br/ >
 
@@ -60,7 +58,7 @@
 
   <br/ >
 
-  <input type="button" value="Submit" onclick="answer">
+
 
   <br/ >
 
@@ -74,7 +72,8 @@
 
   <br/ >
 
-  <input type="button" value="Submit" onclick="answer">
+<input type="button" value="submit" onclick=getPersonality()>
+<div id="div2"></div>
 
   <br/ >
   <br/ >
@@ -89,13 +88,13 @@
        var typeFourScore = 0;
        var typeFiveScore = 0;
 
-      if(document.getElementById("animla1").checked){
+      if(document.getElementById("animal1").checked){
         typeOneScore += 1;
       }
       else if (document.getElementById("animal2").checked){
       typeTwoScore += 1;
     }
-    else if (document.getELementById("animal3").checked){
+    else if (document.getElementById("animal3").checked){
       typeThreeScore += 1;
     }
 
@@ -106,7 +105,7 @@
     else if (document.getElementById("subject2").checked){
     typeTwoScore += 1;
   }
-  else if (document.getELementById("subject3").checked){
+  else if (document.getElementById("subject3").checked){
     typeThreeScore += 1;
   }
 
@@ -116,7 +115,7 @@
   else if (document.getElementById("color2").checked){
   typeTwoScore += 1;
   }
-  else if (document.getELementById("color3").checked){
+  else if (document.getElementById("color3").checked){
   typeThreeScore += 1;
   }
   if(document.getElementById("sport1").checked){
@@ -125,7 +124,7 @@
   else if (document.getElementById("sport2").checked){
   typeTwoScore += 1;
   }
-  else if (document.getELementById("sport3").checked){
+  else if (document.getElementById("sport3").checked){
   typeThreeScore += 1;
   }
   if(document.getElementById("song1").checked){
@@ -134,25 +133,25 @@
   else if (document.getElementById("song2").checked){
   typeTwoScore += 1;
   }
-  else if (document.getELementById("song3").checked){
+  else if (document.getElementById("song3").checked){
   typeThreeScore += 1;
 }
 
-}
-    if(typeOneScore > typeTwoScore > typeThreeScore > typeFourScore > typeFiveScore){
-      document.getElementById("MainDiv").innerHTML += "Your personality is type 1!";
+
+    if(typeOneScore > typeTwoScore && typeOneScore > typeThreeScore && typeOneScore > typeFourScore && typeOneScore > typeFiveScore){
+      document.getElementById("div2").innerHTML = "Your personality is type 1!";
     }
-    else{
-        document.getElementById("MainDiv").innerHTML += "Your personality is type 2!";
+    else if (typeTwoScore > typeOneScore && typeTwoScore > typeThreeScore && typeTwoScore > typeFourScore && typeTwoScore > typeFiveScore) {
+      document.getElementById("div2").innerHTML = "Your personality is type 2!";
    }
-   else{
-       document.getElmentById("MainDive").innerHTML += "Your personality is type 3!";
+   else if (typeThreeScore > typeOneScore && typeThreeScore > typeTwoScore && typeThreeScore > typeFourScore && typeThreeScore > typeFiveScore){
+       document.getElementById("div2").innerHTML = "Your personality is type 3!";
   }
-  else{
-      document.getElementById("MainDiv").innerHTML += "Your personality is type 4!";
+  else if (typeFourScore > typeOneScore && typeFourScore > typeTwoScore && typeFourScore > typeThreeScore && typeFourScore > typeFiveScore){
+      document.getElementById("div2").innerHTML = "Your personality is type 4!";
  }
  else{
-     document.getElementBYId("Maindiv").innerHTML += "Your personality is type 5!";
+     document.getElementById("div2").innerHTML = "Your personality is type 5!";
  }
 }
 
